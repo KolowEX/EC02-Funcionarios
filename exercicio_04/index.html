@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EC02 - Funcionários - Exercício 4</title>
+  <!-- Página sem CSS: foco em HTML, DOM e JavaScript. -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <p><a href="../index.html">Voltar para EC02 - Funcionários</a></p>
+  <h1>EC02 - Funcionários - Exercício 4</h1>
+  <p>filter, map, reduce e new Set para relatórios dinâmicos.</p>
+  <h2>Cadastro</h2>
+  <form id="form-registro">
+      <p><label for="nome">Nome:</label> <input id="nome" name="nome" type="text" required maxlength="100"></p>
+      <p><label for="idade">Idade:</label> <input id="idade" name="idade" type="number" min="1" max="120" step="1" required></p>
+      <p><label for="cargo">Cargo:</label> <input id="cargo" name="cargo" type="text" required maxlength="100"></p>
+      <p><label for="salario">Salário (R$):</label> <input id="salario" name="salario" type="number" min="0" step="0.01" required></p>
+      <button type="submit" id="btn-salvar">Cadastrar</button>
+      <button type="button" id="btn-cancelar" hidden>Cancelar edição</button>
+  </form>
+      <p id="mensagem" role="status"></p>
+  <h2>Lista de funcionarios</h2>
+  <table border="1" cellpadding="6">
+    <thead>
+      <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Idade</th>
+          <th scope="col">Cargo</th>
+          <th scope="col">Salário</th>
+          <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-registros"></tbody>
+  </table>
+  <section>
+    <h2>Relatórios</h2>
+    <button type="button" id="btn-relatorios">Atualizar relatórios</button>
+    <div id="relatorios" aria-live="polite"></div>
+  </section>
+</body>
+</html>
